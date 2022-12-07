@@ -94,6 +94,9 @@ const vis: CollapsibleTreeVisualization = {
       .ok(sdk.me("id, first_name, last_name, display_name, email"))
       .then((me) => {
         console.log({ me });
+      })
+      .catch((err) => {
+        console.log(err);
       });
   },
 

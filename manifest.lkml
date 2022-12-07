@@ -1,17 +1,16 @@
-project_name: "viz-collapsible_tree-marketplace"
+project_name: "noovle-big-data-analytics"
 
 constant: VIS_LABEL {
-  value: "Collapsible Tree"
+  value: "Noovle Custom Collapsible Tree"
   export: override_optional
 }
 
 constant: VIS_ID {
-  value: "collapsible_tree-marketplace"
+  value: "Collapsible_tree_noovle"
   export:  override_optional
 }
 
 visualization: {
   id: "@{VIS_ID}"
-  url: "https://marketplace-api.looker.com/viz-dist/collapsible_tree.js"
   label: "@{VIS_LABEL}"
 }
