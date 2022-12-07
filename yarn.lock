@@ -177,6 +177,18 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@looker/sdk-node@^22.20.0":
+  version "22.20.0"
+  resolved "https://registry.yarnpkg.com/@looker/sdk-node/-/sdk-node-22.20.0.tgz#1483cf9e9b6140a244a7a03f0d16603d45351d37"
+  integrity sha512-mEQ+g8vuBPbPeE76CgACGAlmELlmt4manTmjJgQ9brHdJiUzCHUlyPKYm/GiqNe5vGjZTkh016U1RrF6HNmA9g==
+  dependencies:
+    "@looker/sdk" "^22.20.0"
+    "@looker/sdk-rtl" "^21.4.0"
+    ini "^1.3.8"
+    readable-stream "^3.4.0"
+    request "^2.88.0"
+    request-promise-native "^1.0.8"
+
 "@looker/sdk-rtl@^21.4.0":
   version "21.4.0"
   resolved "https://registry.yarnpkg.com/@looker/sdk-rtl/-/sdk-rtl-21.4.0.tgz#830e8f73a6fd13bee11a361fdde47d2504092427"

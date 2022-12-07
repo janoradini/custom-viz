@@ -3,6 +3,7 @@ declare var looker: Looker;
 
 import * as d3 from "d3";
 import { handleErrors } from "../utils";
+import { LookerNodeSDK, NodeSettings } from "@looker/sdk-node";
 
 import {
   Row,
@@ -88,6 +89,12 @@ const vis: CollapsibleTreeVisualization = {
   // Set up the initial state of the visualization
   create(element, config) {
     this.svg = d3.select(element).append("svg");
+    const sdk = LookerNodeSDK.init31();
+    sdk
+      .ok(sdk.me("id, first_name, last_name, display_name, email"))
+      .then((me) => {
+        console.log({ me });
+      });
   },
 
   // Render in response to the data or settings changing

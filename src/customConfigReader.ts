@@ -1,10 +1,5 @@
-import {
-  LookerNodeSDK,
-  NodeSettings,
-  IApiSettings,
-  IApiSection,
-} from "@looker/sdk";
-
+import { LookerNodeSDK, NodeSettings } from "@looker/sdk-node";
+import { IApiSettings, IApiSection } from "@looker/sdk-rtl";
 /**
  * @class customConfigReader
  *
@@ -12,10 +7,11 @@ import {
  * in NodeSettings to allow fetching client_id and client_secret
  * from anywhere.
  */
-class customConfigReader extends NodeSettings {
+class CustomConfigReader extends NodeSettings {
   constructor(settings: IApiSettings) {
-    super(settings);
+    super("", settings);
   }
+
   /**
    * @returns an IApiSection object containing client_id and client_secret
    */
@@ -29,15 +25,13 @@ class customConfigReader extends NodeSettings {
 
 (async () => {
   const sdk = LookerNodeSDK.init31(
-    new customConfigReader({
+    new CustomConfigReader({
       base_url: "https://<your-looker-server>:19999",
     } as IApiSettings)
   );
 
   const me = await sdk.ok(
-    sdk.me(
-      "id, first_name, last_name, display_name, email, personal_space_id, home_space_id, group_ids, role_ids"
-    )
+    sdk.me("id, first_name, last_name, display_name, email")
   );
   console.log({ me });
 })();
