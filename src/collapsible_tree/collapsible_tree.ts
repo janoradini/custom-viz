@@ -84,6 +84,12 @@ const vis: CollapsibleTreeVisualization = {
       type: "string",
       display: "color",
     },
+    base_url: {
+      label: "Base Url",
+      default: "https://<your-looker-server>:19999",
+      type: "string",
+      display: "text",
+    },
   },
 
   // Set up the initial state of the visualization
@@ -96,7 +102,8 @@ const vis: CollapsibleTreeVisualization = {
     sdk
       .ok(sdk.me("id, first_name, last_name, display_name, email"))
       .then((me) => {
-        console.log({ me });
+        console.error("SDK init Error: ");
+        console.error(me);
       })
       .catch((err) => {
         console.log(err);
