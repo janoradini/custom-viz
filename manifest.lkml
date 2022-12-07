@@ -13,4 +13,6 @@ constant: VIS_ID {
 visualization: {
   id: "@{VIS_ID}"
   label: "@{VIS_LABEL}"
+  file: "collapsible_tree.js"
+  dependencies: []
 }
