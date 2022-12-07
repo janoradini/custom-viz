@@ -73,13 +73,13 @@ const vis: CollapsibleTreeVisualization = {
   label: "Collapsible Tree",
   options: {
     color_with_children: {
-      label: "Node Color With Children",
+      label: "Node Color - With Children",
       default: "#eb4034",
       type: "string",
       display: "color",
     },
     color_empty: {
-      label: "Empty Node Color",
+      label: "Node Color - Empty",
       default: "#fff",
       type: "string",
       display: "color",
