@@ -89,6 +89,9 @@ const vis: CollapsibleTreeVisualization = {
   // Set up the initial state of the visualization
   create(element, config) {
     this.svg = d3.select(element).append("svg");
+    console.log("Hello from view!");
+    console.log(config);
+
     const sdk = LookerBrowserSDK.init31();
     sdk
       .ok(sdk.me("id, first_name, last_name, display_name, email"))
