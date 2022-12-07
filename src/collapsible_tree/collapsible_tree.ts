@@ -74,7 +74,7 @@ const vis: CollapsibleTreeVisualization = {
   options: {
     color_with_children: {
       label: "Node Color With Children",
-      default: "#36c1b3",
+      default: "#eb4034",
       type: "string",
       display: "color",
     },
